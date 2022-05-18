@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ludo Screen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            empty-cells: show;
+        }
+        
+        .game {
+            width: 600px;
+            height: 600px;
+            margin-left: 450px;
+            margin-top: 30px;
+            background-color: white;
+        }
+        
+        body {
+            background-color: darkcyan;
+        }
+        
+        .home {
+            background-color: white;
+            border-bottom-color: blue;
+            border-top-color: green;
+            border-left-color: red;
+            border-right-color: yellow;
+            border-width: 10px;
+        }
+        
+        .house {
+            height: 240px;
+            width: 240px;
+        }
+        
+        .box {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .red {
+            height: 30px;
+            width: 30px;
+            background-color: red;
+        }
+        
+        .green {
+            height: 30px;
+            width: 30px;
+            background-color: green;
+        }
+        
+        .yellow {
+            height: 30px;
+            width: 30px;
+            background-color: yellow;
+        }
+        
+        .blue {
+            height: 30px;
+            width: 30px;
+            background-color: blue;
+        }
+        
+        .box-red {
+            background-color: red;
+        }
+        
+        .box-green {
+            background-color: green;
+        }
+        
+        .box-yellow {
+            background-color: yellow;
+        }
+        
+        .box-blue {
+            background-color: blue;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .parent {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .image1 {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .image2 {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- main table -->
+    <table class="game" border="1px" rules=all style="border-color: black;">
+        <!-- 1st row -->
+        <tr>
+            <!-- red house -->
+            <td class="house">
+                <table border="30" style="border-color: red; background-color:white; padding: 20px;" width=100% height=100%>
+                    <tr>
+                        <td class="red"></td>
+                        <td class="red"><img src="red.png" style="width: 50%; padding-left: 15px;" /></td>
+                    </tr>
+                    <tr>
+                        <td class="red"><img src="red.png" style="width: 50%; padding-left: 15px;  " /></td>
+                        <td class="red"></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- green-white box -->
+            <td>
+                <table rules=all style="background-color:white;" width=100% height=100%>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box"><img src="blue.png" /></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-green box"></td>
+                        <td class="box-green box"></td>
+                    </tr>
+                    <tr class="parent">
+                        <td class="box"><img class="image1" src="star1.png" /><img class="image2" src="red.png" /></td>
+                        <td class="box-green box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-green box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-green box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-green box"></td>
+                        <td class="box"></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- green house -->
+            <td class="house">
+                <table border="30" style="border-color:green; background-color:white; padding: 20px;" width=100% height=100%>
+                    <tr>
+                        <td class="green"></td>
+                        <td class="green"><img src="green.png" style="width: 50%; padding-left: 15px;  " /></td>
+                    </tr>
+                    <tr>
+                        <td class="green"></td>
+                        <td class="green"><img src="green.png" style="width: 50%; padding-left: 15px;  " /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- 2nd row -->
+        <tr>
+
+            <!-- red-white box -->
+            <td>
+                <table rules=all style="background-color:white;" width=100% height=100%>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-red"></td>
+                        <td class="box"></td>
+                        <td class="box"><img src="yellow.png" /></td>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-red box"></td>
+                        <td class="box-red box"></td>
+                        <td class="box-red box"></td>
+                        <td class="box-red box"></td>
+                        <td class="box-red box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box"><img src="star1.png" /></td>
+                        <td class="box"><img src="blue.png" /></td>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- winnner house -->
+            <td>
+                <table class="home" rules=all border="5px" width=100% height=100%>
+                    <tr>
+                        <td style="font-weight: bold; text-align: center;">Winner</td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- yellow-white box -->
+            <td>
+                <table rules=all style="background-color:white; " width=100% height=100%>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box"><img src="star1.png" /></td>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box"><img src="green.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="box-yellow box"></td>
+                        <td class="box-yellow box"></td>
+                        <td class="box-yellow box"></td>
+                        <td class="box-yellow box"></td>
+                        <td class="box-yellow box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box-yellow box"><img src="yellow.png" /></td>
+                        <td class="box"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- 3rd row -->
+        <tr>
+
+            <!-- blue house -->
+            <td class="house">
+                <table border="30 " style="border-color: blue; background-color:white; padding: 20px; " width=100% height=100%>
+                    <tr>
+                        <td class="blue "></td>
+                        <td class="blue "></td>
+                    </tr>
+                    <tr>
+                        <td class="blue "><img src="blue.png " style="width: 50%; padding-left: 15px;   " /></td>
+                        <td class="blue "><img src="blue.png " style="width: 50%; padding-left: 15px;   " /></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- blue-white box -->
+            <td>
+                <table rules=all style="background-color:white; " width=100% height=100%>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-blue box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-blue box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"><img src="green.png" /></td>
+                        <td class="box-blue box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box-blue box"></td>
+                        <td class="box"><img src="star1.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="box-blue box"></td>
+                        <td class="box-blue box"></td>
+                        <td class="box"></td>
+                    </tr>
+                    <tr>
+                        <td class="box"></td>
+                        <td class="box"></td>
+                        <td class="box"><img src="red.png" /></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- yellow house -->
+            <td class="house">
+                <table border="30 " style="border-color: yellow; background-color:white; padding: 20px; " width=100% height=100%>
+                    <tr>
+                        <td class="yellow "><img src="yellow.png " style="width: 50%; padding-left: 15px;   " /></td>
+                        <td class="yellow "></td>
+                    </tr>
+                    <tr>
+                        <td class="yellow "></td>
+                        <td class="yellow "><img src="yellow.png " style="width: 50%; padding-left: 15px;   " /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
